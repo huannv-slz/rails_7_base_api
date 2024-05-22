@@ -11,9 +11,9 @@ development:
   <<: *default
   url: postgres://ffdafdsfasd_user:UVQtTrsYPNTrH3Jm0fJHbgoAY8Czew4F@dpg-cp6qj7mv3ddc73folh9g-a.oregon-postgres.render.com/ffdafdsfasd
 
-# test:
-#   <<: *default
-#   database: rails_api_base_test<%= ENV['TEST_ENV_NUMBER'] %>
+test:
+  <<: *default
+  url: postgres://ffdafdsfasd_user:UVQtTrsYPNTrH3Jm0fJHbgoAY8Czew4F@dpg-cp6qj7mv3ddc73folh9g-a.oregon-postgres.render.com/ffdafdsfasd
 
 # For production is recommended to set DATABASE_URL env variable.
 # It will take precedence over the config defined here.
