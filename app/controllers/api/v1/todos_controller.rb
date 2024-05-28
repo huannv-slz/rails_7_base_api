@@ -1,7 +1,7 @@
 class API::V1::TodosController < API::V1::APIController
   # GET /api/v1/todos
   def index
-    todos = Todo.all
+		todos = Todo.filter(params.slice(:status))
     render json: { todos: todos }
   end
 

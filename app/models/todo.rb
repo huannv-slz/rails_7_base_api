@@ -9,8 +9,12 @@
 #  updated_at :datetime         not null
 #
 class Todo < ApplicationRecord
-    enum status: {
-        active: 1,
-        completed: 2
-    }
+  include Filterable
+  enum status: {
+    active: 1,
+    completed: 2
+  }
+  search_scope :status, lambda { |status|
+                          where(status:)
+                        }
 end
