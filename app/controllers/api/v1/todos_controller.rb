@@ -1,7 +1,7 @@
 class API::V1::TodosController < API::V1::APIController
   # GET /api/v1/todos
   def index
-		todos = Todo.filter(params.slice(:status))
+		todos = Todo.filter(filter_params)
     render json: { todos: todos }
   end
 
@@ -45,6 +45,10 @@ class API::V1::TodosController < API::V1::APIController
   end
 
   private
+
+	def filter_params
+		params.slice(:status)
+	end
 
   def todo_params
     params.require(:todo).permit(:name, :status)
