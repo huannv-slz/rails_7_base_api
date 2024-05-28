@@ -14,7 +14,7 @@ class Todo < ApplicationRecord
     active: 1,
     completed: 2
   }
-  search_scope :status, lambda { |status|
+  scope :status, lambda { |status|
                           where(status:)
                         }
 end
