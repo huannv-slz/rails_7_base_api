@@ -10,6 +10,7 @@
 #
 class Todo < ApplicationRecord
   include Filterable
+  validates :name, uniqueness: true, presence: true
   enum status: {
     active: 1,
     completed: 2
