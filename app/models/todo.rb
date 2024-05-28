@@ -16,6 +16,6 @@ class Todo < ApplicationRecord
     completed: 2
   }
   scope :status, lambda { |status|
-                          where(status:)
-                        }
+                   where(status:)
+                 }
 end
