@@ -161,3 +161,11 @@ Rails API Base is maintained by [Rootstrap](http://www.rootstrap.com) with the h
 [contributors](https://github.com/rootstrap/rails_api_base/contributors).
 
 [<img src="https://s3-us-west-1.amazonaws.com/rootstrap.com/img/rs.png" width="100"/>](http://www.rootstrap.com)
+
+## Setup
+```
+rvm install 3.3.1
+rvm use 3.3.1
+bundle install
+rails console
+```
